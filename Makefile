@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/02/08 15:42:31 by tmanet           ###   ########.fr        #
+#    Updated: 2016/02/09 11:33:13 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ FLAGS = -Wall -Wextra -Werror
 LIB = libft/libft.a
 
 SRC =   main.c \
-
+		ft_atolst.c \
+		ft_print_stack_a.c
 
 
 OBJ = $(SRC:.c=.o)
