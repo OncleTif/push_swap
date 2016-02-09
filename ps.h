@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/09 14:33:00 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/09 14:55:20 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,6 @@ t_list	*ft_lstrotate(t_list *lst);
 void	ra(t_stck *stck);
 void	rb(t_stck *stck);
 void	rs(t_stck *stck);
+void	pa(t_stck *stck);
+void	pb(t_stck *stck);
 #endif
