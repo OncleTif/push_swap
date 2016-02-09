@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/02/09 11:33:13 by tmanet           ###   ########.fr        #
+#    Updated: 2016/02/09 14:37:03 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,15 @@ LIB = libft/libft.a
 
 SRC =   main.c \
 		ft_atolst.c \
-		ft_print_stack_a.c
+		ft_print_stack_a.c \
+		ft_lstswap.c \
+		sa.c \
+		sb.c \
+		ss.c \
+		ft_lstrotate.c \
+		ra.c \
+		rb.c \
+		rs.c \
 
 
 OBJ = $(SRC:.c=.o)

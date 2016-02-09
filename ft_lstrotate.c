@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstrotate.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/08 15:54:14 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/09 14:37:37 by tmanet           ###   ########.fr       */
+/*   Created: 2016/02/09 14:13:04 by tmanet            #+#    #+#             */
+/*   Updated: 2016/02/09 14:32:24 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-int	main(int argc, char **argv)
+t_list	*ft_lstrotate(t_list *lst)
 {
-	t_stck	stack;
-	t_stck	*stck;
+	t_list	*first;
 
-	stck = &stack;
-	stck->a_size = 0;
-	if (argc > 1)
-	{
-		while (stck->a_size + 1 < argc)
-		{
-			ft_lstadd(&stck->a, ft_atolst(argv[stck->a_size + 1]));
-			stck->a_size++;
-		}
-		ss(stck);
-		rs(stck);
-		ft_print_stack_a(stck);
-	}
-	else
-		ft_error("not enough arguments");
-	return (0);
+	if (!lst || !lst->next)
+		return (lst);
+	first = lst->next;
+	lst->next = NULL;
+	ft_lstpush_back(&first, lst);
+	return (first);
 }
