@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/02/09 14:55:36 by tmanet           ###   ########.fr        #
+#    Updated: 2016/02/10 12:55:20 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,8 @@ LIB = libft/libft.a
 SRC =   main.c \
 		ft_atolst.c \
 		ft_print_stack_a.c \
+		ft_ntry_creator.c \
+		ft_bubble_solve.c \
 		ft_lstswap.c \
 		sa.c \
 		sb.c \
