@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_ntry_creator.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/08 15:54:14 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/10 12:23:11 by tmanet           ###   ########.fr       */
+/*   Created: 2016/02/10 12:21:25 by tmanet            #+#    #+#             */
+/*   Updated: 2016/02/10 12:21:55 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-int	main(int argc, char **argv)
+void	ft_ntry_creator(t_stck *stck)
 {
-	t_stck	stack;
-	t_stck	*stck;
+	int		init;
+	t_list	*elem;
 
-	stck = &stack;
-	stck->a_size = 0;
-	if (argc > 1)
+
+	init = 0;
+	elem = stck->a;
+	if (!(stck->ntry = (t_ntry*)ft_memalloc(sizeof(t_ntry) * stck->a_size)))
+		ft_error("allocation fail on goal");
+	while (init < stck->a_size)
 	{
-		while (stck->a_size + 1 < argc)
-		{
-			ft_lstadd(&stck->a, ft_atolst(argv[stck->a_size + 1]));
-			stck->a_size++;
-		}
-		ft_ntry_creator(stck);
-		ss(stck);
-		rs(stck);
-		ft_print_stack_a(stck);
+		stck->ntry[init].init = init;
+		stck->ntry[init].value = *(int*)elem->content;
+		elem = elem->next;
+		init++;
 	}
-	else
-		ft_error("not enough arguments");
-	return (0);
+	ft_bubble_solve(stck);
 }

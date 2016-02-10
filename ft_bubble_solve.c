@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_bubble_solve.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/08 15:54:14 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/10 12:23:11 by tmanet           ###   ########.fr       */
+/*   Created: 2016/02/10 10:42:36 by tmanet            #+#    #+#             */
+/*   Updated: 2016/02/10 12:19:37 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-int	main(int argc, char **argv)
+void	ft_bubble_solve(t_stck *stck)
 {
-	t_stck	stack;
-	t_stck	*stck;
+	int	pos;
+	int	pos2;
 
-	stck = &stack;
-	stck->a_size = 0;
-	if (argc > 1)
+	pos = 0;
+
+	while (pos < stck->a_size)
 	{
-		while (stck->a_size + 1 < argc)
+		pos2 = 0;
+		while (pos2 < stck->a_size)
 		{
-			ft_lstadd(&stck->a, ft_atolst(argv[stck->a_size + 1]));
-			stck->a_size++;
+			if (stck->ntry[pos].value > stck->ntry[pos2].value)
+				stck->ntry[pos].goal++;
+			pos2++;
 		}
-		ft_ntry_creator(stck);
-		ss(stck);
-		rs(stck);
-		ft_print_stack_a(stck);
+		pos++;
 	}
-	else
-		ft_error("not enough arguments");
-	return (0);
 }

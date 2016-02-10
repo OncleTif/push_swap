@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/09 14:55:20 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/10 12:22:22 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 # include "libft/libft.h"
 
 typedef struct s_move	t_move;
+typedef struct s_ntry	t_ntry;
 
 typedef struct	s_stck
 {
 	int		a_size;
 	int		b_size;
+	t_ntry	*ntry;
 	t_list	*a;
 	t_list	*b;
 }				t_stck;
@@ -30,8 +32,18 @@ struct			s_move
 	t_move		*next;
 };
 
+struct			s_ntry
+{
+int				init;
+int				goal;
+int				value;
+int				pos_offset;
+};
+
 t_list	*ft_atolst(char*str);
 void	ft_print_stack_a(t_stck *stck);
+void	ft_ntry_creator(t_stck *stck);
+void	ft_bubble_solve(t_stck *stck);
 t_list	*ft_lstswap(t_list *lst);
 void	sa(t_stck *stck);
 void	sb(t_stck *stck);
