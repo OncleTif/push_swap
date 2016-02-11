@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bubble_solve.c                                  :+:      :+:    :+:   */
+/*   rrb.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/10 10:42:36 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/11 11:25:33 by tmanet           ###   ########.fr       */
+/*   Created: 2016/02/11 11:47:08 by tmanet            #+#    #+#             */
+/*   Updated: 2016/02/11 11:49:13 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-void	ft_bubble_solve(t_stck *stck)
+void	rrb(t_stck *stck)
 {
-	int	pos;
-	int	pos2;
-
-	pos = 0;
-	while (pos < stck->a_size)
-	{
-		pos2 = 0;
-		while (pos2 < stck->a_size)
-		{
-			if (stck->ntry[pos].value < stck->ntry[pos2].value)
-				stck->ntry[pos].goal++;
-			pos2++;
-		}
-		pos++;
-	}
-	ft_offset(stck);
+	stck->b = ft_lstrrotate(stck->b);
 }

@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/09 13:52:25 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/09 13:52:28 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/11 12:28:35 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstswap(t_list *lst)
 	t_list	*next;
 
 	if (!lst || !lst->next)
-		return(lst);
+		return (lst);
 	next = lst->next;
 	lst->next = next->next;
 	next->next = lst;

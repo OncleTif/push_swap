@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bubble_solve.c                                  :+:      :+:    :+:   */
+/*   ft_lstrrotate.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/10 10:42:36 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/11 11:25:33 by tmanet           ###   ########.fr       */
+/*   Created: 2016/02/11 11:38:08 by tmanet            #+#    #+#             */
+/*   Updated: 2016/02/11 11:44:40 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-void	ft_bubble_solve(t_stck *stck)
+t_list	*ft_lstrrotate(t_list *lst)
 {
-	int	pos;
-	int	pos2;
+	t_list	*last;
+	t_list	*new_last;
 
-	pos = 0;
-	while (pos < stck->a_size)
+	if (!lst || !lst->next)
+		return (lst);
+	last = lst;
+	while (last->next)
 	{
-		pos2 = 0;
-		while (pos2 < stck->a_size)
-		{
-			if (stck->ntry[pos].value < stck->ntry[pos2].value)
-				stck->ntry[pos].goal++;
-			pos2++;
-		}
-		pos++;
+		new_last = last;
+		last = last->next;
 	}
-	ft_offset(stck);
+	new_last->next = NULL;
+	ft_lstadd(&lst, last);
+	return (last);
 }

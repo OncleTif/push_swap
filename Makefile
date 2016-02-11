@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/02/10 16:59:42 by tmanet           ###   ########.fr        #
+#    Updated: 2016/02/11 11:49:37 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,10 @@ SRC =   main.c \
 		ra.c \
 		rb.c \
 		rs.c \
+		ft_lstrrotate.c \
+		rra.c \
+		rrb.c \
+		rrs.c \
 		pa.c \
 		pb.c \
 

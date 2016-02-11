@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:54:14 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/10 12:56:27 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/11 11:49:54 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	main(int argc, char **argv)
 		ft_ntry_creator(stck);
 		//ss(stck);
 		//rs(stck);
+		rrs(stck);
 		ft_print_stack_a(stck);
 	}
 	else

@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/10 12:21:25 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/10 12:21:55 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/11 12:29:17 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_ntry_creator(t_stck *stck)
 {
 	int		init;
 	t_list	*elem;
-
 
 	init = 0;
 	elem = stck->a;
