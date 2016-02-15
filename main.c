@@ -18,7 +18,10 @@ int	main(int argc, char **argv)
 	t_stck	*stck;
 
 	stck = &stack;
+	stck->a = NULL;
+	stck->b = NULL;
 	stck->a_size = 0;
+	stck->b_size = 0;
 	if (argc > 1)
 	{
 		while (stck->a_size + 1 < argc)
