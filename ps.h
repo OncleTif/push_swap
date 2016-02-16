@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/11 12:32:30 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/02/16 15:57:13 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,5 @@ void					rrb(t_stck *stck);
 void					rrs(t_stck *stck);
 void					pa(t_stck *stck);
 void					pb(t_stck *stck);
+t_stck					*ft_stck_init(t_stck *stck);
 #endif
