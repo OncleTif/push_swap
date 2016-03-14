@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/16 15:57:13 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/14 16:43:38 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct			s_stck
 struct					s_move
 {
 	t_stck				*stck;
+	char				*op;
 	t_move				*next;
 };
 
@@ -42,6 +43,7 @@ struct					s_ntry
 
 t_list					*ft_atolst(char*str);
 void					ft_print_stack_a(t_stck *stck);
+void					ft_resolve(t_stck *stck);
 void					ft_ntry_creator(t_stck *stck);
 void					ft_bubble_solve(t_stck *stck);
 void					ft_offset(t_stck *stck);
@@ -60,4 +62,5 @@ void					rrs(t_stck *stck);
 void					pa(t_stck *stck);
 void					pb(t_stck *stck);
 t_stck					*ft_stck_init(t_stck *stck);
+t_move					*ft_newmove(t_move *nxt, t_stck *stck);
 #endif

@@ -1,38 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_newmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/08 15:54:14 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/14 16:10:35 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/14 16:23:34 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/14 16:42:39 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-int	main(int argc, char **argv)
+t_move	*ft_newmove(t_move *nxt, t_stck *stck)
 {
-	t_stck	stack;
-	t_stck	*stck;
+	t_move	*move;
 
-	stck = ft_stck_init(&stack);
-	if (argc > 1)
-	{
-		while (stck->a_size + 1 < argc)
-		{
-			ft_lstadd(&stck->a, ft_atolst(argv[stck->a_size + 1]));
-			stck->a_size++;
-		}
-		ft_ntry_creator(stck);
-		ft_resolve(stck);
-		//ss(stck);
-		//rs(stck);
-		rrs(stck);
-		ft_print_stack_a(stck);
-	}
-	else
-		ft_error("not enough arguments");
-	return (0);
+		if (!(move = (t_move*)ft_memalloc(sizeof(t_move))))
+			ft_error("move allocation error");
+	move->next = nxt;
+	move->stck = stck;
+	return (move);
 }
