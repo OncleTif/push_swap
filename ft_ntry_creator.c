@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/10 12:21:25 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/17 11:58:44 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/17 13:24:16 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	ft_ntry_creator(t_stck *stck)
 	{
 		stck->ntry[init].init = init;
 		stck->ntry[init].value = ((t_ntry*)elem->content)->value;
+		((t_ntry*)elem->content)->init = init;
 		elem = elem->next;
 		init++;
 	}
