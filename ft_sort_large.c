@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bubble_solve.c                                  :+:      :+:    :+:   */
+/*   ft_sort_large.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/10 10:42:36 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/17 11:11:20 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/17 10:37:20 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/17 10:55:08 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-void	ft_bubble_solve(t_stck *stck)
+void	ft_sort_large(t_stck *stck)
 {
-	int	pos;
-	int	pos2;
+	int	i;
 
-	pos = 0;
-	while (pos < stck->a_size)
+	i = 0;
+	while (i < stck->size)
 	{
-		pos2 = 0;
-		while (pos2 < stck->a_size)
-		{
-			if (stck->ntry[pos].value < stck->ntry[pos2].value)
-				stck->ntry[pos].goal++;
-			pos2++;
-		}
-		pos++;
+
+
+i++;
 	}
-	ft_offset(stck);
+	ft_push_b_to_a(stck);
 }

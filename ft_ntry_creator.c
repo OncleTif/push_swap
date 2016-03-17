@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/10 12:21:25 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/14 15:44:04 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/17 11:08:45 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_ntry_creator(t_stck *stck)
 	init = 0;
 	elem = stck->a;
 	if (!(stck->ntry = (t_ntry*)ft_memalloc(sizeof(t_ntry) * stck->a_size)))
-		ft_error("allocation fail on goal");
+		ft_error("allocation fail on ntry");
 	while (init < stck->a_size)
 	{
 		stck->ntry[init].init = init;

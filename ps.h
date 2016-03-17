@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/14 16:43:38 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/17 10:54:42 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ typedef struct s_ntry	t_ntry;
 typedef struct			s_stck
 {
 	int		a_size;
+	int		size;
 	int		b_size;
 	t_ntry	*ntry;
 	t_list	*a;
@@ -43,6 +44,7 @@ struct					s_ntry
 
 t_list					*ft_atolst(char*str);
 void					ft_print_stack_a(t_stck *stck);
+void					ft_push_b_to_a(t_stck *stck);
 void					ft_resolve(t_stck *stck);
 void					ft_ntry_creator(t_stck *stck);
 void					ft_bubble_solve(t_stck *stck);

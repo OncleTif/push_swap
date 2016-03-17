@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:54:14 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/14 16:10:35 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/17 10:46:48 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,12 @@ int	main(int argc, char **argv)
 			ft_lstadd(&stck->a, ft_atolst(argv[stck->a_size + 1]));
 			stck->a_size++;
 		}
+		stck->size = stck->a_size;
 		ft_ntry_creator(stck);
-		ft_resolve(stck);
+//		ft_resolve(stck);
 		//ss(stck);
 		//rs(stck);
-		rrs(stck);
+//		rrs(stck);
 		ft_print_stack_a(stck);
 	}
 	else
