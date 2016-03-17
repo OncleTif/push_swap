@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/11 11:45:02 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/11 11:46:44 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/17 15:56:17 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,5 @@
 void	rra(t_stck *stck)
 {
 	stck->a = ft_lstrrotate(stck->a);
+	ft_putstr("rra ");
 }

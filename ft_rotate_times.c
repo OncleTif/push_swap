@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pa.c                                               :+:      :+:    :+:   */
+/*   ft_rotate_times.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/09 14:47:01 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/17 15:55:14 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/17 14:58:37 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/17 15:01:37 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-void	pa(t_stck *stck)
+void	ft_rotate_times(t_stck *stck, int times)
 {
-	t_list	*to_push;
+	int	i;
 
-	if (stck->b)
+	i = 0;
+	while (i < times)
 	{
-		to_push = stck->b;
-		stck->b = stck->b->next;
-		stck->b_size--;
-		ft_lstadd(&stck->a, to_push);
-		stck->a_size++;
-		ft_putstr("pa ");
+		ra(stck);
+		i++;
 	}
 }

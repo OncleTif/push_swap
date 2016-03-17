@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/09 14:52:27 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/09 14:53:40 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/17 15:54:44 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ void	pb(t_stck *stck)
 		stck->a_size--;
 		ft_lstadd(&stck->b, to_push);
 		stck->b_size++;
+		ft_putstr("pb ");
 	}
 }

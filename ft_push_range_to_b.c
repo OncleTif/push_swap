@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pa.c                                               :+:      :+:    :+:   */
+/*   ft_push_range_to_b.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/09 14:47:01 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/17 15:55:14 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/17 14:50:16 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/17 15:53:38 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-void	pa(t_stck *stck)
+void	ft_push_range_to_b(t_stck *stck, int range)
 {
-	t_list	*to_push;
+	int	i;
+	t_list	*elem;
 
-	if (stck->b)
+	elem = stck->a;
+	i = 0;
+	while (((t_ntry*)elem->content)->goal != range)
 	{
-		to_push = stck->b;
-		stck->b = stck->b->next;
-		stck->b_size--;
-		ft_lstadd(&stck->a, to_push);
-		stck->a_size++;
-		ft_putstr("pa ");
+		elem = elem->next;
+		i++;
 	}
+	if (i < stck->a_size / 2)
+		ft_rotate_times(stck, i);
+	else
+		ft_rev_rotate_times(stck, stck->a_size - i);
+	pb(stck);
 }

@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/14 15:44:47 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/14 17:56:03 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/17 15:53:20 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 void	ft_resolve(t_stck *stck)
 {
-	t_move	*moves;
+	int	i;
 
-	if (stck->a_size < 6)
+	i = 0;
+	while (i < stck->size)
 	{
-		moves =
+		ft_push_range_to_b(stck, i);
+		i++;
 	}
+	ft_push_b_to_a(stck);
 }
