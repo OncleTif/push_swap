@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/10 10:42:36 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/17 11:11:20 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/17 14:37:08 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 void	ft_bubble_solve(t_stck *stck)
 {
-	int	pos;
-	int	pos2;
+	t_list	*elem;
+	t_list	*ref;
 
-	pos = 0;
-	while (pos < stck->a_size)
+	elem = stck->a;
+	while (elem)
 	{
-		pos2 = 0;
-		while (pos2 < stck->a_size)
+		ref = stck->a;
+		while (ref)
 		{
-			if (stck->ntry[pos].value < stck->ntry[pos2].value)
-				stck->ntry[pos].goal++;
-			pos2++;
+			if (((t_ntry*)elem->content)->value <
+					((t_ntry*)ref->content)->value)
+				((t_ntry*)elem->content)->goal++;
+			ref = ref->next;
 		}
-		pos++;
+		elem = elem->next;
 	}
-	ft_offset(stck);
 }
