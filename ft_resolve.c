@@ -21,8 +21,11 @@ void	ft_resolve(t_stck *stck)
 	{
 		ft_push_range_to_b(stck, i);
 		i++;
-		ft_putchar('\n');
-		ft_print_stack_a(stck);
+		if (stck->debug)
+		{
+			ft_putchar('\n');
+			ft_print_stack_a(stck);
+		}
 	}
 	ft_push_b_to_a(stck);
 }

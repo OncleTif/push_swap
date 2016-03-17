@@ -19,5 +19,6 @@ t_stck	*ft_stck_init(t_stck *stck)
 	stck->a_size = 0;
 	stck->size = 0;
 	stck->b_size = 0;
+	stck->debug = 0;
 	return (stck);
 }
