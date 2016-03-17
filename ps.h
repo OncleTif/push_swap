@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/17 15:08:19 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/17 16:53:38 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct			s_stck
 	t_ntry	*ntry;
 	t_list	*a;
 	t_list	*b;
+	int		debug;
 }						t_stck;
 
 struct					s_move
