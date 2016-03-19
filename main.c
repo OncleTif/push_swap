@@ -31,7 +31,7 @@ int	main(int argc, char **argv)
 		//ss(stck);
 		//rs(stck);
 //		rrs(stck);
-		ft_print_stack_a(stck);
+	//	ft_print_stack_a(stck);
 	}
 	else
 		ft_error("not enough arguments");
