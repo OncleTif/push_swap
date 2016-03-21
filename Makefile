@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/03/17 15:10:16 by tmanet           ###   ########.fr        #
+#    Updated: 2016/03/21 11:09:40 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ SRC =   main.c \
 		pb.c \
 		ft_resolve.c \
 		ft_push_range_to_b.c \
+		ft_range_finder.c \
 		ft_push_b_to_a.c \
 		ft_rotate_times.c \
 		ft_rev_rotate_times.c \
