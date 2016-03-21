@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/16 15:53:40 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/21 17:13:32 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/21 17:48:24 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ t_stck	*ft_stck_init(t_stck *stck)
 	stck->b_size = 0;
 	stck->debug = 0;
 	stck->print = &ft_print_first;
+	stck->moves = 0;
 	return (stck);
 }
