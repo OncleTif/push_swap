@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/09 11:10:15 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/17 13:13:43 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/21 11:02:47 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_atolst(char *str)
 
 	if (!str)
 		return (NULL);
-	if(!(elem = ft_lstnew(NULL, 0)))
+	if (!(elem = ft_lstnew(NULL, 0)))
 		ft_error("allocation fail on list");
 	if (!(ntry = (t_ntry*)ft_memalloc(sizeof(t_ntry))))
 		ft_error("allocation fail on ntry");

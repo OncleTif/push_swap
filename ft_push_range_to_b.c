@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/17 14:50:16 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/17 15:53:38 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/21 11:02:07 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_push_range_to_b(t_stck *stck, int range)
 {
-	int	i;
+	int		i;
 	t_list	*elem;
 
 	elem = stck->a;
