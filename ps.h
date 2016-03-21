@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/21 11:07:52 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/21 13:32:17 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@ struct					s_ntry
 t_list					*ft_atolst(char*str);
 void					ft_print_stack_a(t_stck *stck);
 void					ft_push_range_to_b(t_stck *stck, int range);
-void					ft_range_finder(t_stck *stck, int range);
-void					ft_rotate_times(t_stck *stck, int times);
-void					ft_rev_rotate_times(t_stck *stck, int times);
+int						ft_range_finder(t_stck *stck, int range);
+int						ft_rotate_times(t_stck *stck, int times, int next);
+int						ft_rev_rotate_times(t_stck *stck, int times, int next);
 void					ft_push_b_to_a(t_stck *stck);
 void					ft_resolve(t_stck *stck);
 void					ft_ntry_creator(t_stck *stck);
