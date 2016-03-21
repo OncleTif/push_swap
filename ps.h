@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/21 13:32:17 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/21 17:35:48 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 
 typedef struct s_move	t_move;
 typedef struct s_ntry	t_ntry;
+typedef struct s_stck	t_stck;
 
-typedef struct			s_stck
+struct					s_stck
 {
 	int		a_size;
 	int		size;
@@ -26,11 +27,12 @@ typedef struct			s_stck
 	t_list	*a;
 	t_list	*b;
 	int		debug;
-}						t_stck;
+	t_move	*moves;
+	void	(*print)(char*, t_stck*);
+};
 
 struct					s_move
 {
-	t_stck				*stck;
 	char				*op;
 	t_move				*next;
 };
@@ -45,6 +47,8 @@ struct					s_ntry
 
 t_list					*ft_atolst(char*str);
 void					ft_print_stack_a(t_stck *stck);
+void					ft_print(char *str, t_stck *stck);
+void					ft_print_first(char *str, t_stck *stck);
 void					ft_push_range_to_b(t_stck *stck, int range);
 int						ft_range_finder(t_stck *stck, int range);
 int						ft_rotate_times(t_stck *stck, int times, int next);
@@ -69,5 +73,6 @@ void					rrs(t_stck *stck);
 void					pa(t_stck *stck);
 void					pb(t_stck *stck);
 t_stck					*ft_stck_init(t_stck *stck);
-t_move					*ft_newmove(t_move *nxt, t_stck *stck);
+t_move					*ft_newmove(t_move *nxt, char *str);
+void					ft_print_moves(t_move *move);
 #endif

@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:54:14 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/21 12:14:04 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/21 17:38:15 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ int	main(int argc, char **argv)
 		stck->size = stck->a_size;
 		ft_ntry_creator(stck);
 		ft_resolve(stck);
+		ft_putchar('\n');
+		if (stck->moves)
+			ft_print_moves(stck->moves);
 	}
 	else
 		ft_error("not enough arguments");

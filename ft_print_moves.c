@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stck_init.c                                     :+:      :+:    :+:   */
+/*   ft_print_moves.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/16 15:53:40 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/21 17:13:32 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/21 17:26:01 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/21 17:29:54 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-t_stck	*ft_stck_init(t_stck *stck)
+void	ft_print_moves(t_move *move)
 {
-	stck->a = NULL;
-	stck->b = NULL;
-	stck->a_size = 0;
-	stck->size = 0;
-	stck->b_size = 0;
-	stck->debug = 0;
-	stck->print = &ft_print_first;
-	return (stck);
+	if (move->next)
+	{
+		ft_print_moves(move->next);
+		ft_putchar(' ');
+	}
+	ft_putstr(move->op);
 }
