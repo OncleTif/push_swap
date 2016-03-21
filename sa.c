@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/09 13:42:52 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/21 17:33:35 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/21 17:43:22 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,5 @@
 void	sa(t_stck *stck)
 {
 	stck->a = ft_lstswap(stck->a);
-	ft_putstr("sa ");
 	stck->moves = ft_newmove(stck->moves, "sa");
 }

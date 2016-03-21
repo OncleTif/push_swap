@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/11 11:47:08 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/11 11:49:13 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/21 17:45:27 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,5 @@
 void	rrb(t_stck *stck)
 {
 	stck->b = ft_lstrrotate(stck->b);
+	stck->moves = ft_newmove(stck->moves, "rrb");
 }
