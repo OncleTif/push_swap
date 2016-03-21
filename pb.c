@@ -23,6 +23,6 @@ void	pb(t_stck *stck)
 		stck->a_size--;
 		ft_lstadd(&stck->b, to_push);
 		stck->b_size++;
-		stck->moves = ft_newmove(stck->moves, "pb");
+		ft_newmove(stck, "pb");
 	}
 }

@@ -15,5 +15,5 @@
 void	sa(t_stck *stck)
 {
 	stck->a = ft_lstswap(stck->a);
-	stck->moves = ft_newmove(stck->moves, "sa");
+	ft_newmove(stck, "sa");
 }

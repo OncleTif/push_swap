@@ -15,5 +15,5 @@
 void	rrb(t_stck *stck)
 {
 	stck->b = ft_lstrrotate(stck->b);
-	stck->moves = ft_newmove(stck->moves, "rrb");
+	ft_newmove(stck, "rrb");
 }

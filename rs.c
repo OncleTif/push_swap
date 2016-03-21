@@ -16,5 +16,5 @@ void	rs(t_stck *stck)
 {
 	stck->a = ft_lstrotate(stck->a);
 	stck->b = ft_lstrotate(stck->b);
-	stck->moves = ft_newmove(stck->moves, "rs");
+	ft_newmove(stck, "rs");
 }

@@ -21,6 +21,7 @@ t_stck	*ft_stck_init(t_stck *stck)
 	stck->b_size = 0;
 	stck->debug = 0;
 	stck->print = &ft_print_first;
-	stck->moves = 0;
+	stck->moves = NULL;
+	stck->lst_move = NULL;
 	return (stck);
 }

@@ -14,15 +14,16 @@
 
 void	ft_print_moves(t_move *move)
 {
-	if (move)
+	int	first;
+
+	first = 1;
+	while (move)
 	{
-		if (move->next)
-		{
-			ft_putendl("descend");
-			ft_print_moves(move->next);
-			ft_putendl("remonte");
+		if (first)
 			ft_putchar(' ');
-		}
+		else
+			first = 0;
 		ft_putstr(move->op);
+		move = move->next;
 	}
 }

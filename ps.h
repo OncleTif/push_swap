@@ -28,6 +28,7 @@ struct					s_stck
 	t_list	*b;
 	int		debug;
 	t_move	*moves;
+	t_move	*lst_move;
 	void	(*print)(char*, t_stck*);
 };
 
@@ -73,6 +74,6 @@ void					rrs(t_stck *stck);
 void					pa(t_stck *stck);
 void					pb(t_stck *stck);
 t_stck					*ft_stck_init(t_stck *stck);
-t_move					*ft_newmove(t_move *nxt, char *str);
+void					ft_newmove(t_stck *stck, char *str);
 void					ft_print_moves(t_move *move);
 #endif

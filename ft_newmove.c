@@ -12,13 +12,16 @@
 
 #include "ps.h"
 
-t_move	*ft_newmove(t_move *nxt, char *str)
+void	ft_newmove(t_stck *stck, char *str)
 {
 	t_move	*move;
 
 	if (!(move = (t_move*)ft_memalloc(sizeof(t_move))))
 		ft_error("move allocation error");
-	move->next = nxt;
+	if (stck->lst_move)
+		stck->lst_move->next = move;
+	else
+		stck->moves = move;
+	stck->lst_move = move;
 	move->op = ft_strdup(str);
-	return (move);
 }

@@ -23,6 +23,6 @@ void	pa(t_stck *stck)
 		stck->b_size--;
 		ft_lstadd(&stck->a, to_push);
 		stck->a_size++;
-		stck->moves = ft_newmove(stck->moves, "pa");
+		ft_newmove(stck, "pa");
 	}
 }
