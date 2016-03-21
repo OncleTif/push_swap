@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 11:06:56 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/21 11:07:11 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/21 12:23:50 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,14 @@ void	ft_range_finder(t_stck *stck, int range)
 		elem = elem->next;
 		i++;
 	}
-	if (i < stck->a_size / 2)
-		ft_rotate_times(stck, i);
-	else
-		ft_rev_rotate_times(stck, stck->a_size - i);
+	if (i)
+	{
+//		ft_putnbr(range);
+//		ft_putnbrendl(i);
+		if (i <= stck->a_size / 2)
+			ft_rotate_times(stck, i);
+		else
+			ft_rev_rotate_times(stck, stck->a_size - i);
+	}
 	pb(stck);
 }
