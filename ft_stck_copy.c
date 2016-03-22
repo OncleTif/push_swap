@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_resolve_a.c                                     :+:      :+:    :+:   */
+/*   ft_stck_copy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/22 12:10:50 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/22 14:02:28 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/22 14:12:10 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/22 14:17:17 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-void	ft_resolve_a(t_stck *stck)
+t_stck	*ft_stck_copy(t_stck *stck)
 {
-	int		limit;
-	t_move	*moves;
+	t_stck	*cpy;
 
-	limit = ft_count_moves(stck);
-if (limit > ft_backtrack(
+	cpy = NULL;
+	if (stck)
+	{
+		if (!(cpy = (t_stck*)ft_memalloc(sizeof(t_stck))))
+			ft_error("allocation of stack copy error");
+		ft_memcpy(cpy, stck, sizeof(t_stck));
+	}
+	return (cpy);
 }
