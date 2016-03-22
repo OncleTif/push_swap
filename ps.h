@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/22 11:27:31 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/22 13:05:15 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ struct					s_stck
 	int		a_size;
 	int		size;
 	int		b_size;
-	t_ntry	*ntry;
 	t_list	*a;
 	t_list	*b;
 	int		debug;
@@ -56,6 +55,7 @@ int						ft_rotate_times(t_stck *stck, int times, int next);
 int						ft_rev_rotate_times(t_stck *stck, int times, int next);
 void					ft_push_b_to_a(t_stck *stck);
 void					ft_resolve(t_stck *stck);
+void					ft_resolve_a(t_stck *stck);
 void					ft_ntry_creator(t_stck *stck);
 void					ft_bubble_solve(t_stck *stck);
 void					ft_offset(t_stck *stck);
@@ -79,4 +79,5 @@ void					ft_print_moves(t_move *move);
 void					ft_optimize_moves(t_stck *stck);
 int						ft_pa_pb_reduce(t_stck *stck);
 void					ft_freemove(t_move *move);
+int						ft_count_moves(t_stck *stck);
 #endif

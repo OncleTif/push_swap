@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_offset.c                                        :+:      :+:    :+:   */
+/*   ft_count_moves.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/10 17:00:17 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/22 12:26:22 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/22 13:00:42 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/22 13:03:34 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-void	ft_offset(t_stck *stck)
+int	ft_count_moves(t_stck *stck)
 {
-	int pos;
-t_list	*ls;
+	int		nbr;
+	t_move	*move;
 
-pos = 0;
-ls = stck->a;
-	while (pos < stck->a_size)
+	move = stck->moves;
+	nbr = 0;
+	while (move)
 	{
-		//stck->ntry[pos].offset = stck->ntry[pos].init - stck->ntry[pos].goal;
-		pos++;
+		move = move->next;
+		nbr++;
 	}
+	return (nbr);
 }

@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/03/22 11:40:24 by tmanet           ###   ########.fr        #
+#    Updated: 2016/03/22 12:32:06 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,6 @@ SRC =   main.c \
 		ft_print_stack_a.c \
 		ft_ntry_creator.c \
 		ft_bubble_solve.c \
-		ft_offset.c \
 		ft_lstswap.c \
 		ft_stck_init.c \
 		sa.c \
