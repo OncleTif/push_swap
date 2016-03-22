@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:54:14 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/22 11:37:27 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/22 12:02:34 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int	main(int argc, char **argv)
 		ft_ntry_creator(stck);
 		ft_resolve(stck);
 		ft_optimize_moves(stck);
-		ft_putendl("affichage");
 		if (stck->moves)
 			ft_print_moves(stck->moves);
 	}
