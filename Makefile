@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/03/21 17:36:41 by tmanet           ###   ########.fr        #
+#    Updated: 2016/03/22 11:40:24 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,9 @@ SRC =   main.c \
 		pa.c \
 		pb.c \
 		ft_newmove.c \
+		ft_optimize_moves.c \
+		ft_pa_pb_reduce.c \
+		ft_freemove.c \
 		ft_print.c \
 		ft_print_first.c \
 		ft_print_moves.c \

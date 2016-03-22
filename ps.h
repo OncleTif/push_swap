@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/21 17:35:48 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/22 11:27:31 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,7 @@ void					pb(t_stck *stck);
 t_stck					*ft_stck_init(t_stck *stck);
 void					ft_newmove(t_stck *stck, char *str);
 void					ft_print_moves(t_move *move);
+void					ft_optimize_moves(t_stck *stck);
+int						ft_pa_pb_reduce(t_stck *stck);
+void					ft_freemove(t_move *move);
 #endif
