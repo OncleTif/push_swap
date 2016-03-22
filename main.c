@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:54:14 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/22 12:02:34 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/22 18:19:32 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,9 @@ int	main(int argc, char **argv)
 		}
 		stck->size = stck->a_size;
 		ft_ntry_creator(stck);
+		stck->init = ft_lsntry_copy(stck->a);
 		ft_resolve(stck);
-		ft_optimize_moves(stck);
+//		ft_optimize_moves(stck);
 		if (stck->moves)
 			ft_print_moves(stck->moves);
 	}

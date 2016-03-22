@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stck_copy.c                                     :+:      :+:    :+:   */
+/*   ft_moves_copy.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/22 14:12:10 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/22 18:09:24 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/22 17:50:32 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/22 18:00:01 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-t_stck	*ft_stck_copy(t_stck *stck)
+t_move	*ft_moves_copy(t_move *move)
 {
-	t_stck	*cpy;
+	t_move	*cpy;
 
 	cpy = NULL;
-	if (stck)
+	if (move)
 	{
-		if (!(cpy = (t_stck*)ft_memalloc(sizeof(t_stck))))
-			ft_error("allocation of stack copy error");
-		ft_memcpy(cpy, stck, sizeof(t_stck));
-		cpy->a = ft_lsntry_copy(stck->a);
-		cpy->moves = ft_moves_copy(stck->moves);
+		if (!(cpy = (t_move*)ft_memalloc(sizeof(t_move))))
+			ft_error("allocation fail on move copy");
+		cpy->op = ft_strdup(move->op);
+		cpy->next = ft_moves_copy(move->next);
 	}
 	return (cpy);
 }

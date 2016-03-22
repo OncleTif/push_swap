@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/22 13:05:15 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/22 18:03:55 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ struct					s_stck
 	int		size;
 	int		b_size;
 	t_list	*a;
+	t_list	*init;
 	t_list	*b;
 	int		debug;
 	t_move	*moves;
@@ -80,4 +81,7 @@ void					ft_optimize_moves(t_stck *stck);
 int						ft_pa_pb_reduce(t_stck *stck);
 void					ft_freemove(t_move *move);
 int						ft_count_moves(t_stck *stck);
+t_list					*ft_lsntry_copy(t_list *elem);
+t_move					*ft_moves_copy(t_move *move);
+t_stck					*ft_stck_copy(t_stck *t_stck);
 #endif
