@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ntry_del.c                                      :+:      :+:    :+:   */
+/*   ft_stck_swap.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/23 14:44:13 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/23 17:41:16 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/23 16:55:49 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/23 16:59:35 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-void	ft_ntry_del(void *ntry, size_t i)
+int	ft_stck_swap(t_stck **a, t_stck **b, int bst)
 {
-	i++;
-	ft_memdel(&ntry);
+	t_stck	*swap;
+
+	swap = *a;
+	*a = *b;
+	*b = swap;
+	return (bst);
 }

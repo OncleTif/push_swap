@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/23 15:21:20 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/23 18:01:57 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void					rrb(t_stck *stck);
 void					rrs(t_stck *stck);
 void					pa(t_stck *stck);
 void					pb(t_stck *stck);
-t_stck					*ft_stck_init(t_stck *stck);
+t_stck					*ft_stck_init();
 void					ft_newmove(t_stck *stck, char *str);
 void					ft_print_moves(t_move *move);
 void					ft_optimize_moves(t_stck *stck);
@@ -87,5 +87,7 @@ t_stck					*ft_stck_copy(t_stck *t_stck);
 void					ft_moves_del(t_move **move);
 void					ft_ntry_del(void *ntry, size_t i);
 void					ft_stck_del(t_stck **stck);
-int						ft_backtrack(t_stck *stck, int limit);
+int						ft_backtrack(t_stck **stck, int limit);
+int						ft_sorted(t_list *list);
+int						ft_stck_swap(t_stck **a, t_stck **b, int bst);
 #endif

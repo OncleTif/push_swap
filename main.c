@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:54:14 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/22 18:19:32 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/23 18:04:07 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 int	main(int argc, char **argv)
 {
-	t_stck	stack;
 	t_stck	*stck;
 
-	stck = ft_stck_init(&stack);
+	stck = ft_stck_init();
 	if (argc > 1)
 	{
 		while (stck->a_size + 1 < argc)
@@ -29,6 +28,9 @@ int	main(int argc, char **argv)
 		ft_ntry_creator(stck);
 		stck->init = ft_lsntry_copy(stck->a);
 		ft_resolve(stck);
+		ft_putendl("av resolve a");
+		ft_resolve_a(&stck);
+		ft_putendl("ap resolve a");
 //		ft_optimize_moves(stck);
 		if (stck->moves)
 			ft_print_moves(stck->moves);

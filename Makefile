@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/03/22 18:14:14 by tmanet           ###   ########.fr        #
+#    Updated: 2016/03/23 17:08:14 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,16 @@ SRC =   main.c \
 		rrs.c \
 		pa.c \
 		pb.c \
+		ft_resolve_a.c \
+		ft_backtrack.c \
+		ft_count_moves.c \
+		ft_moves_del.c \
+		ft_stck_copy.c \
+		ft_stck_del.c \
+		ft_moves_copy.c \
+		ft_ntry_del.c \
+		ft_sorted.c \
+		ft_stck_swap.c \
 		ft_newmove.c \
 		ft_lsntry_copy.c \
 		ft_optimize_moves.c \

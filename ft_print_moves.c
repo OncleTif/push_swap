@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 17:26:01 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/21 17:54:46 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/23 18:28:16 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	ft_print_moves(t_move *move)
 	while (move)
 	{
 		if (first)
-			ft_putchar(' ');
-		else
 			first = 0;
+		else
+			ft_putchar(' ');
 		ft_putstr(move->op);
 		move = move->next;
 	}
