@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/23 18:01:57 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/23 19:00:53 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,5 @@ void					ft_stck_del(t_stck **stck);
 int						ft_backtrack(t_stck **stck, int limit);
 int						ft_sorted(t_list *list);
 int						ft_stck_swap(t_stck **a, t_stck **b, int bst);
+t_move					*ft_find_lst_move(t_move *moves);
 #endif

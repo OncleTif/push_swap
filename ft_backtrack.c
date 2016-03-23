@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/14 17:56:33 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/23 18:34:10 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/23 19:09:23 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,19 @@ int	ft_backtrack(t_stck **stck, int limit)
 		return (1);
 	if (ft_sorted((*stck)->a))
 		return (0);
+	ret = limit;
 	bst = ft_stck_copy(*stck);
-	sa(bst);
-	ret = ft_backtrack(&bst, limit - 1);
+	rra(bst);
+	ret = ft_backtrack(&bst, ret - 1);
 	cpy = ft_stck_copy(*stck);
-	ra(cpy);
+	sa(cpy);
 	move = ft_backtrack(&cpy, limit - 1);
 	if (move < ret)
 		ret = ft_stck_swap(&cpy, &bst, move);
 	ft_stck_del(&cpy);
 	cpy = ft_stck_copy(*stck);
-	rra(cpy);
-	move = ft_backtrack(&cpy, limit - 1);
+	sa(cpy);
+	move = ft_backtrack(&cpy, ret - 1);
 	if (move < ret)
 		ret = ft_stck_swap(&cpy, &bst, move);
 	ft_stck_del(&cpy);
