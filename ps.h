@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/22 18:03:55 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/23 12:32:08 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,5 @@ int						ft_count_moves(t_stck *stck);
 t_list					*ft_lsntry_copy(t_list *elem);
 t_move					*ft_moves_copy(t_move *move);
 t_stck					*ft_stck_copy(t_stck *t_stck);
+void					ft_moves_del(t_move **move);
 #endif

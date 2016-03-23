@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stck_del.c                                      :+:      :+:    :+:   */
+/*   ft_moves_del.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/22 18:24:26 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/23 12:48:59 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/23 12:32:50 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/23 12:32:53 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-void	ft_stck_del(t_stck **stck)
+void	ft_moves_del(t_move **move)
 {
-	if (stck)
+	if (move && *move)
 	{
-		ft_moves_del(&(*stck)->moves);
-		ft_memdel((void**)stck);
+		ft_strdel(&(*move)->op);
+		ft_moves_del(&(*move)->next);
+		ft_memdel((void**)move);
 	}
 }
