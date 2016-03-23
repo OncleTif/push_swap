@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/14 17:56:33 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/22 18:13:45 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/23 15:25:07 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_backtrack(t_stck *stck, int limit)
 {
-	t_stck	*stck:x
-		;
+	t_stck	*cpy;
+
 
 	move = f
 	return (move);

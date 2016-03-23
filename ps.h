@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/23 12:32:08 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/23 15:21:20 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int						ft_rotate_times(t_stck *stck, int times, int next);
 int						ft_rev_rotate_times(t_stck *stck, int times, int next);
 void					ft_push_b_to_a(t_stck *stck);
 void					ft_resolve(t_stck *stck);
-void					ft_resolve_a(t_stck *stck);
+void					ft_resolve_a(t_stck **stck);
 void					ft_ntry_creator(t_stck *stck);
 void					ft_bubble_solve(t_stck *stck);
 void					ft_offset(t_stck *stck);
@@ -85,4 +85,7 @@ t_list					*ft_lsntry_copy(t_list *elem);
 t_move					*ft_moves_copy(t_move *move);
 t_stck					*ft_stck_copy(t_stck *t_stck);
 void					ft_moves_del(t_move **move);
+void					ft_ntry_del(void *ntry, size_t i);
+void					ft_stck_del(t_stck **stck);
+int						ft_backtrack(t_stck *stck, int limit);
 #endif
