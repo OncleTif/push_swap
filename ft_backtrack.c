@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/14 17:56:33 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/23 18:23:52 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/23 18:34:10 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int	ft_backtrack(t_stck **stck, int limit)
 
 	ft_putstr("lvl : ");
 	ft_putnbrendl(limit);
-	if (limit < 0)
+	ft_print_moves((*stck)->moves);
+	if (!limit)
 		return (1);
 	if (ft_sorted((*stck)->a))
 		return (0);

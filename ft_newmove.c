@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/14 16:23:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/23 18:19:32 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/23 18:47:03 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,7 @@ void	ft_newmove(t_stck *stck, char *str)
 		stck->moves = move;
 	stck->lst_move = move;
 	move->op = ft_strdup(str);
+	ft_putnbrendl((int)stck->moves);
+	ft_putnbrendl((int)stck->lst_move);
+	ft_print_moves(stck->moves);
 }

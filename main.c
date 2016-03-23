@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:54:14 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/23 18:04:07 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/23 18:33:31 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	main(int argc, char **argv)
 		stck->init = ft_lsntry_copy(stck->a);
 		ft_resolve(stck);
 		ft_putendl("av resolve a");
+			ft_print_moves(stck->moves);
 		ft_resolve_a(&stck);
 		ft_putendl("ap resolve a");
 //		ft_optimize_moves(stck);
