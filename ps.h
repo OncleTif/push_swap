@@ -23,6 +23,8 @@ struct					s_stck
 	int		a_size;
 	int		size;
 	int		b_size;
+	int		bgin;
+	int		end;
 	t_list	*a;
 	t_list	*init;
 	t_list	*b;

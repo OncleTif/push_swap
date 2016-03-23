@@ -28,8 +28,6 @@ t_stck	*ft_stck_copy(t_stck *stck)
 		ft_putendl("verif de la copie de moves");
 		ft_print_moves(stck->moves);
 		ft_print_moves(cpy->moves);
-		ft_putnbrendl((int)stck->lst_move);
-		ft_putnbrendl((int)cpy->lst_move);
 	}
 	return (cpy);
 }
