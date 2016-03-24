@@ -58,7 +58,8 @@ int						ft_rotate_times(t_stck *stck, int times, int next);
 int						ft_rev_rotate_times(t_stck *stck, int times, int next);
 void					ft_push_b_to_a(t_stck *stck);
 void					ft_resolve(t_stck *stck);
-void					ft_resolve_a(t_stck **stck);
+void					ft_resolve_back(t_stck **stck);
+void					ft_resolve_a(t_stck *stck);
 void					ft_ntry_creator(t_stck *stck);
 void					ft_bubble_solve(t_stck *stck);
 void					ft_offset(t_stck *stck);
@@ -93,4 +94,5 @@ int						ft_backtrack(t_stck **stck, int limit);
 int						ft_sorted(t_list *list);
 int						ft_stck_swap(t_stck **a, t_stck **b, int bst);
 t_move					*ft_find_lst_move(t_move *moves);
+int						ft_sortiness(t_stck *stck);
 #endif

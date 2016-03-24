@@ -39,6 +39,7 @@ SRC =   main.c \
 		pa.c \
 		pb.c \
 		ft_resolve_a.c \
+		ft_resolve_back.c \
 		ft_backtrack.c \
 		ft_count_moves.c \
 		ft_moves_del.c \

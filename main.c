@@ -30,7 +30,7 @@ int	main(int argc, char **argv)
 		ft_resolve(stck);
 		ft_putendl("av resolve a");
 			ft_print_moves(stck->moves);
-		ft_resolve_a(&stck);
+		ft_resolve_back(&stck);
 		ft_putendl("ap resolve a");
 //		ft_optimize_moves(stck);
 		if (stck->moves)
