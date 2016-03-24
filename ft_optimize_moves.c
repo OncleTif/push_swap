@@ -21,7 +21,9 @@ void	ft_optimize_moves(t_stck *stck)
 	{
 		while (opt)
 		{
-			opt = ft_pa_pb_reduce(stck);
+			opt = ft_reduce(stck, "pa", "pb");
+			opt = opt + ft_reduce(stck, "ra", "rra");
+			opt = opt + ft_reduce(stck, "sa", "sa");
 		}
 	}
 }

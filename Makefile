@@ -58,7 +58,7 @@ SRC =   main.c \
 		ft_newmove.c \
 		ft_lsntry_copy.c \
 		ft_optimize_moves.c \
-		ft_pa_pb_reduce.c \
+		ft_reduce.c \
 		ft_freemove.c \
 		ft_print.c \
 		ft_print_first.c \

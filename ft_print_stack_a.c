@@ -24,7 +24,9 @@ void	ft_print_stack_a(t_stck *stck)
 		ft_putstr("value : ");
 		ft_putnbr(((t_ntry*)elem->content)->value);
 		ft_putstr(" final position : ");
-		ft_putnbrendl(((t_ntry*)elem->content)->goal);
+		ft_putnbr(((t_ntry*)elem->content)->goal);
+		ft_putstr(" offset : ");
+		ft_putnbrendl(pos - ((t_ntry*)elem->content)->goal);
 		elem = elem->next;
 		pos++;
 	}

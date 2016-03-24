@@ -28,15 +28,25 @@ int	main(int argc, char **argv)
 		ft_ntry_creator(stck);
 		stck->init = ft_lsntry_copy(stck->a);
 		ft_putnbrendl(ft_sortiness(stck));
-		if (ft_sortiness(stck) < 4 || ft_sorted_offset(stck))
-			ft_resolve_a(stck);
+		ft_putnbrendl(stck->bgin);
+		ft_putnbrendl(stck->end);
+		if (ft_sorted_offset(stck))
+			ft_unoffset(stck);
 		else
-			ft_resolve(stck);
-		ft_putendl("av resolve back");
-		ft_print_moves(stck->moves);
-		// ft_resolve_back(&stck);
-		ft_putendl("ap resolve back");
-		//		ft_optimize_moves(stck);
+		{
+			if (ft_sortiness(stck) < 4)
+				ft_resolve_a(stck);
+			else
+				ft_resolve(stck);
+			ft_optimize_moves(stck);
+			if (ft_count_moves(stck) < 2)
+			{
+				ft_putendl("av resolve back");
+				ft_print_moves(stck->moves);
+				ft_resolve_back(&stck);
+				ft_putendl("ap resolve back");
+			}
+		}
 		ft_putendl("affichage");
 		if (stck->moves)
 			ft_print_moves(stck->moves);
