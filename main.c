@@ -27,7 +27,8 @@ int	main(int argc, char **argv)
 		stck->size = stck->a_size;
 		ft_ntry_creator(stck);
 		stck->init = ft_lsntry_copy(stck->a);
-		if (ft_sortiness(stck) < 4 )
+		ft_putnbrendl(ft_sortiness(stck));
+		if (ft_sortiness(stck) < 4 || ft_sorted_offset(stck))
 			ft_resolve_a(stck);
 		else
 			ft_resolve(stck);

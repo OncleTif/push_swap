@@ -82,6 +82,7 @@ void					ft_newmove(t_stck *stck, char *str);
 void					ft_print_moves(t_move *move);
 void					ft_optimize_moves(t_stck *stck);
 void					ft_unoffset(t_stck *stck);
+void					ft_move(t_stck *stck, int rge);
 int						ft_pa_pb_reduce(t_stck *stck);
 void					ft_freemove(t_move *move);
 int						ft_count_moves(t_stck *stck);

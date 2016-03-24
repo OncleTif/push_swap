@@ -51,6 +51,8 @@ SRC =   main.c \
 		ft_moves_copy.c \
 		ft_ntry_del.c \
 		ft_sorted.c \
+		ft_sorted_offset.c \
+		ft_move.c \
 		ft_stck_swap.c \
 		ft_find_lst_move.c \
 		ft_newmove.c \
