@@ -27,17 +27,15 @@ int	main(int argc, char **argv)
 		stck->size = stck->a_size;
 		ft_ntry_creator(stck);
 		stck->init = ft_lsntry_copy(stck->a);
-		if (stck->size < 5)
-			ft_unoffset(stck);
+		if (ft_sortiness(stck) < 4 )
+			ft_resolve_a(stck);
 		else
-		{
 			ft_resolve(stck);
-			ft_putendl("av resolve a");
-			ft_print_moves(stck->moves);
-			ft_resolve_back(&stck);
-			ft_putendl("ap resolve a");
-			//		ft_optimize_moves(stck);
-		}
+		ft_putendl("av resolve back");
+		ft_print_moves(stck->moves);
+		// ft_resolve_back(&stck);
+		ft_putendl("ap resolve back");
+		//		ft_optimize_moves(stck);
 		ft_putendl("affichage");
 		if (stck->moves)
 			ft_print_moves(stck->moves);

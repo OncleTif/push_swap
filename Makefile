@@ -42,6 +42,7 @@ SRC =   main.c \
 		ft_resolve_back.c \
 		ft_unoffset.c \
 		ft_offset.c \
+		ft_sortiness.c \
 		ft_backtrack.c \
 		ft_count_moves.c \
 		ft_moves_del.c \
