@@ -12,16 +12,11 @@
 
 #include "ps.h"
 
-void	ft_offset(t_stck *stck)
+int	ft_offset(t_stck *stck, int goal, int pos)
 {
-	int pos;
-t_list	*ls;
+	int	offset;
 
-pos = 0;
-ls = stck->a;
-	while (pos < stck->a_size)
-	{
-		//stck->ntry[pos].offset = stck->ntry[pos].init - stck->ntry[pos].goal;
-		pos++;
-	}
+	if ((offset = pos - goal) < 0)
+		return (offset + stck->size);
+	return (offset);
 }

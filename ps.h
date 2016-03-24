@@ -62,7 +62,7 @@ void					ft_resolve_back(t_stck **stck);
 void					ft_resolve_a(t_stck *stck);
 void					ft_ntry_creator(t_stck *stck);
 void					ft_bubble_solve(t_stck *stck);
-void					ft_offset(t_stck *stck);
+int						ft_offset(t_stck *stck, int goal, int pos);
 t_list					*ft_lstswap(t_list *lst);
 void					sa(t_stck *stck);
 void					sb(t_stck *stck);
