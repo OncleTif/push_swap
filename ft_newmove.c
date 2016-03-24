@@ -24,5 +24,4 @@ void	ft_newmove(t_stck *stck, char *str)
 		stck->moves = move;
 	stck->lst_move = move;
 	move->op = ft_strdup(str);
-	ft_print_moves(stck->moves);
 }

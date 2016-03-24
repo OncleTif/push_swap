@@ -15,6 +15,6 @@
 void	ft_resolve_a(t_stck *stck)
 {
 
-
+stck++;
 
 }
