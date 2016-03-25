@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 12:32:15 by tmanet            #+#    #+#             */
-/*   Updated: 2016/02/08 16:42:01 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/25 15:03:39 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <errno.h>
 # include <limits.h>
 # define BUFF_SIZE 4
-# define DEBUG 1
+# define DEBUG 0
 
 typedef struct		s_list
 {
