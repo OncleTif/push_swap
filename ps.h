@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/25 13:05:08 by tmanet           ###   ########.fr       */
+/*   Created: 2016/03/25 13:47:33 by tmanet            #+#    #+#             */
+/*   Updated: 2016/03/25 13:54:36 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void					ft_freemove(t_move *move);
 int						ft_count_moves(t_stck *stck);
 t_list					*ft_lsntry_copy(t_list *elem);
 t_move					*ft_moves_copy(t_move *move);
-t_stck					*ft_stck_copy(t_stck *t_stck);
+t_stck					*ft_stck_copy(t_stck *stck);
 void					ft_moves_del(t_move **move);
 void					ft_ntry_del(void *ntry, size_t i);
 void					ft_stck_del(t_stck **stck);
