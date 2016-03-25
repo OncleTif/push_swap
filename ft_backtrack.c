@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/14 17:56:33 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/23 19:09:23 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/25 12:37:40 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,8 @@ int	ft_backtrack(t_stck **stck, int limit)
 	int		move;
 	int		ret;
 
-	ft_putstr("lvl : ");
-	ft_putnbrendl(limit);
-	ft_print_moves((*stck)->moves);
-	if (!limit)
-		return (1);
-	if (ft_sorted((*stck)->a))
-		return (0);
+	if (!limit || ft_sorted((*stck)->a))
+		return (!limit);
 	ret = limit;
 	bst = ft_stck_copy(*stck);
 	rra(bst);
@@ -44,6 +39,5 @@ int	ft_backtrack(t_stck **stck, int limit)
 	ft_stck_del(&cpy);
 	ft_stck_del(stck);
 	*stck = bst;
-	ft_print_moves(bst->moves);
 	return (ret + 1);
 }

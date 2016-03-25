@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:55:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/25 11:23:08 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/25 13:05:08 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ struct					s_ntry
 	int					init;
 	int					goal;
 	int					value;
-	int					offset;
 };
 
 t_list					*ft_atolst(char*str);
@@ -60,7 +59,7 @@ void					ft_push_b_to_a(t_stck *stck);
 void					ft_resolve(t_stck *stck);
 void					ft_resolve_back(t_stck **stck);
 void					ft_resolve_a(t_stck *stck);
-void					ft_ntry_creator(t_stck *stck);
+void					ft_ntry_init(t_stck *stck, int argc, char **argv);
 void					ft_bubble_solve(t_stck *stck);
 int						ft_offset(t_stck *stck, int goal, int pos);
 t_list					*ft_lstswap(t_list *lst);
