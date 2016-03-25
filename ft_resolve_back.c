@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/25 11:20:30 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/25 12:53:13 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/25 14:24:46 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	ft_resolve_back(t_stck **stck)
 		cpy->a = cpy->init;
 		ft_moves_del(&cpy->moves);
 		cpy->lst_move = NULL;
-		ft_print_moves(cpy->moves);
 		if (limit > ft_backtrack(&cpy, limit))
 		{
 			ft_stck_del(stck);

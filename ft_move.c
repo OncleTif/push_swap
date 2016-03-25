@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/25 11:19:05 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/25 11:19:20 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/25 14:20:10 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	ft_move(t_stck *stck, int rge)
 		while (i < rge)
 		{
 			ra(stck);
-			ft_putendl("ra de retour");
 			i++;
 		}
 	}
@@ -32,7 +31,6 @@ void	ft_move(t_stck *stck, int rge)
 	{
 		while (i < stck->size - rge)
 		{
-			ft_putendl("rra de retour");
 			rra(stck);
 			i++;
 		}
