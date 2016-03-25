@@ -2,6 +2,5 @@
 *.o
 *.a
 .*
-libft
 push_swap
 push_swap_*
