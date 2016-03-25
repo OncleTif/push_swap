@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 15:54:14 by tmanet            #+#    #+#             */
-/*   Updated: 2016/03/23 18:33:31 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/03/25 12:32:09 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	main(int argc, char **argv)
 {
 	t_stck	*stck;
+	int		sort;
 
 	stck = ft_stck_init();
 	if (argc > 1)
@@ -34,7 +35,7 @@ int	main(int argc, char **argv)
 			ft_unoffset(stck);
 		else
 		{
-			if (ft_sortiness(stck) < 4)
+			if ((sort = ft_sortiness(stck)) < 2 || (sort == 2 && stck->size == 3 ))
 				ft_resolve_a(stck);
 			else
 				ft_resolve(stck);
